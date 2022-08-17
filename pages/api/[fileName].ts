@@ -15,7 +15,7 @@ export default async function personHandler(
             const modelCanvas = createCanvas(700, 700)
 
                 // asset url + filename
-            const rootURL = ''
+            const rootURL = 'https://github.com/DOEHOONLEE/babylonTester/blob/main/asset/Dude.babylon'
             const babylonModel = `${fileName}.babylon`
             const gltfModel = `${fileName}.gltf`
 
