@@ -30,7 +30,7 @@ export default async function personHandler(
 
             // [2] .gltf model
             // await Babylon.loadModelFromBase64()
-            await Babylon.loadModel(rootURL, gltfModel)
+            await Babylon.loadModel(rootURL, babylonModel)
 
             res.setHeader("Content-Type", "text/html")
             res.write("<img src='" + modelCanvas.toDataURL() + "'>")
