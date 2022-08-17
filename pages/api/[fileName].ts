@@ -16,8 +16,8 @@ export default async function personHandler(
 
                 // asset url + filename
             const rootURL = ''
-            const babylonModel = 'Dude.babylon'
-            const gltfModel = 'box.gltf'
+            const babylonModel = `${fileName}.babylon`
+            const gltfModel = `${fileName}.gltf`
 
                 // 3D model builder init
             const Babylon = new ModelBuilder(modelCanvas)
