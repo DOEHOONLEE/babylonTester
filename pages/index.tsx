@@ -1,6 +1,5 @@
 import PersonComponent from '../components/Person'
 import { Person } from '../interfaces'
-import { people } from '../data'
 
 export default function Index() {
     console.log('????')
