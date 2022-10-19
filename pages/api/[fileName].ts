@@ -17,19 +17,14 @@ export default async function personHandler(
                 // asset url + filename
             const rootURL = 'https://playground.babylonjs.com/scenes/Dude/'
             const babylonModel = `${fileName}.babylon`
-            const gltfModel = `${fileName}.gltf`
 
                 // 3D model builder init
             const Babylon = new ModelBuilder(modelCanvas)
             await Babylon.init()
 
-                // load model
-            // [1] .babylon model
+                // load model from project folder
             // await Babylon.loadModelFromBase64()
-            // await Babylon.loadModel(rootURL, babylonModel)
-
-            // [2] .gltf model
-            // await Babylon.loadModelFromBase64()
+                // load model from remote
             await Babylon.loadModel(rootURL, babylonModel)
 
             res.setHeader("Content-Type", "text/html")
