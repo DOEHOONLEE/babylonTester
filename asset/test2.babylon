@@ -1,0 +1,13 @@
+{"producer":{"name":"Blender","version":"3.1.2","exporter_version":"2.93.5","file":"test2.babylon"},
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"gravity":[0,-9.81,0],
+"materials":[{"name":"Material.002","id":"Material.002","customType":"BABYLON.PBRMaterial","backFaceCulling":false,"emissive":[0,0,0],"reflectivity":[0.5,0.5,0.5],"roughness":0.5,"alpha":1,"transparencyMode":0,"alphaCutOff":0.4,"metallic":0, 
+"albedoTexture":{"name":"artwork.png","level":1,"hasAlpha":true,"coordinatesMode":0,"uOffset":0,"vOffset":0,"uScale":1,"vScale":1,"uAng":0,"vAng":0,"wAng":0,"wrapU":0,"wrapV":0,"coordinatesIndex":0},"useAlphaFromAlbedoTexture":true}],
+"meshes":[{"name":"Plane","id":"Plane","materialId":"Material.002","billboardMode":0,"position":[0,-0.0077,0],"rotation":[-1.5708,0,0],"scaling":[12.3075,10.2514,5.3091],"isVisible":true,"isEnabled":true,"pickable":false
+,"positions":[0.01,0,-0.01,-0.01,0,0.01,-0.01,0,-0.01,0.01,0,0.01]
+,"normals":[0,1,0,0,1,0,0,1,0,0,1,0]
+,"uvs":[1,0,0,1,0,0,1,1]
+,"indices":[0,1,2,0,3,1]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":4,"indexStart":0,"indexCount":6}]
+,"instances":[]}
+]
+}
