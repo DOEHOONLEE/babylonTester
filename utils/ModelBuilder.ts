@@ -23,12 +23,14 @@ export class ModelBuilder {
 
     async init() {
         this.engine = new Engine(this.canvas, true, { preserveDrawingBuffer: true, stencil: true })
+        this.engine.setHardwareScalingLevel(0.5)
         this.scene = new Scene(this.engine)
         this.scene.clearColor = new Color3(0.5, 0.4, 0.4)
-        this.camera = new FreeCamera('cam1', new Vector3(100, 150, -200), this.scene)
+        this.camera = new FreeCamera('cam1', new Vector3(0, 0, 1.05), this.scene)
         this.camera.setTarget(Vector3.Zero())
         const light = new HemisphericLight('light1', new Vector3(0, 1, 0), this.scene)
-        light.intensity = 0.4
+        light.intensity = 0.7
+        light.specular = new Color3(0, 0, 0)
 
         this.engine.runRenderLoop(() => {
             this.scene.render()
@@ -37,12 +39,11 @@ export class ModelBuilder {
 
 
     async loadModel(rootURL, fileName) {
-        const isGltfPlugInAvailable = SceneLoader.IsPluginForExtensionAvailable(".gltf")
-        console.log('Plugin Availability For GLTF ====>', isGltfPlugInAvailable);
 
         return new Promise((resolve, reject) => {
 
             SceneLoader.ImportMesh('', rootURL, fileName, this.scene, (meshes:any, particleSystems:any, skeletons:any, animationGroups:any, transformNodes:any, geometries:any, lights:any) => {
+                // this.scene.getMeshByName('Plane').material.albedoTexture.updateURL('BASE64 HERE..')
                 setTimeout(() => {
                     resolve({
                         meshes, particleSystems, skeletons, animationGroups, transformNodes, geometries, lights
